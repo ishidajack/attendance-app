@@ -1,0 +1,166 @@
+.hidden{
+  display: none;
+}
+
+.accordion-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: right;
+  gap: 8px;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8); 
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,   /* 1で塗りつぶし */
+    'wght' 400, /* 太さ（100?700） */
+    'GRAD' 0,   /* グレード（文字のシャープさ） */
+    'opsz' 24;  /* サイズ（表示サイズに応じて調整） */
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.panel {
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px auto;
+  font-size: 16px;
+}
+
+th, td{
+  border: 1px solid white;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+th:nth-child(1),
+td:nth-child(1){
+  width: 180px;
+  white-space: nowrap;
+}
+
+th{
+  background-color: rgba(13, 24, 243, 0.414);
+  color: white;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+th, td, select{
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+  padding: 8px 12px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+}
+
+select {
+  border: none;
+  background-color: #f2f0f0;
+  font-size: 16px;
+  outline: none;
+  appearance: none;
+}
+
+button:active,
+select:active{
+  transform: scale(0.96);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#date-selector {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#date-select{
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.menu-toggle{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: rgb(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+}
+
+.menu-panel {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 80px ;
+}
+
+.menu-item {
+  padding: 8px 20px;
+  font-size: 13px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid#ccc;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.menu-item.active {
+  background-color: rgba(13, 24, 243, 0.1);
+  color: #0d18f3;
+  font-weight: bold;
+}
+
+.menu-item.active {
+  transform: scale(0.96);
+}
+
+.view-section {
+  display: none;
+  padding: 20px;
+  animation: fadein 0.3s ease;
+}
+
+.view-section.active {
+  display: block;
+
+}
+
+
+
+@keyframes fadein{
+  from { opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
